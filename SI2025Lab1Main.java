@@ -97,6 +97,7 @@ class TaskManager {
             }
         }
         return filtered;
+        //2nd attempts, I messed up the implementation and added them all at once, this is for part 5.
     }
 
     // 6. Find the highest-priority unfinished task
