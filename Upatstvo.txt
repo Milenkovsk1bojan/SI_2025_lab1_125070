@@ -288,3 +288,79 @@ git push origin master
 
 Del 3:
 Cekor 27:
+Ovoj cekor mallku me zbuni, otidov na profilot na: https://github.com/stefanandonov/SI_2025_lab1_151020
+i kliknav na opcija fork.
+Selektirav Copy only the master branch fork.
+So repozitorno ime: SI_2025_lab1_151020
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
+
+
+Cekor 28:
+git clone https://github.com/Milenkovsk1bojan/SI_2025_lab1_151020.git
+bash: https://github.com/Milenkovsk1bojan/SI_2025_lab1_151020.git: No such file or directory
+
+
+
+$ git clone https://github.com/Milenkovsk1bojan/SI_2025_lab1_151020.git
+Cloning into 'SI_2025_lab1_151020'...
+remote: Enumerating objects: 26, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 26 (delta 1), reused 0 (delta 0), pack-reused 23 (from 1)
+Receiving objects: 100% (26/26), 5.56 KiB | 1.85 MiB/s, done.
+Resolving deltas: 100% (7/7), done.
+
+
+
+Cekor 29:
+cd SI_2025_lab1_151020 // promena na folder
+Uspeshna promena
+Potoa proverka na fajlovi;
+ls
+
+nano 125070.txt
+Ne sum dobar so VIM, mallku mi pravi problem so zacuvuvanje ushte prethodno,koga solo ucev za docker.
+Isto moze i so touch, vim ili bilo koja slicna alatka. Najverojatno naubavo so touch, bidejki samo ja kreira.
+Typed in Bojan Milenkovski 12570, ova e moj indeks.
+
+
+git add 125070.txt
+Ova e must dokolku sakam da go ima, dokolku ne, samo commit
+
+git commit -m "Add file"
+
+Cekor 30:
+git push origin master
+
+Cekor 31:
+Baram slika, sto ne postoi. I baranje sto voopsto ne raboti, nemam nikakva opcija Contribute, no potoa sfativ deka ima opcija Create Pull Request.
+
+Otidov so opcija Pull Request -> New Pull Request
+Izgleda uspeav:
+
+
+Cekor 32:
+1 Step Forward, 3 Step Backwards, 5 steps in the Nether.
+Sfativ deka na pocetokot vo cekor 29, staviv povekje od samo moj indeks.
+Mojot tekst beshe: Bojan Milenkovski 125070, ova e moj indeks, blagodaram.
+
+Potoa otidov nazad na cekor 27 se do cekor 30.
+https://github.com/Milenkovsk1bojan/SI_2025_lab1_151020
+
+Napraviv raw edit, i ostaviv samo tekst 125070.
+Napishav komentar, save directly to master branch.
+
+Konecno mi izleze contribute opcija. No ne i create pull request, samo open pull request.
+Kreirav pull request so samo broj na indeks: 125070
+
+git pull origin master // da go imam i lokalno
+
+
+
+
+FINALNI cekori:
+
+Upatstvoto go apdejtirav, za da go imam onlajn za viduvanje.
+cd "C:\Users\Boki\Desktop\SI_2025_lab1_125070" ili cd \  ili cd..
+git add Upatstvo.txt
+git commit -m "Dodavanje na poslednite upatstva.txt"
