@@ -1,0 +1,61 @@
+Prvo:
+Kreiraj GitHub profil: Milenkovski1bojan
+Preimenuvaj main vo master preku update:
+Kreiraj GitHub repozitorium: SI_2025_lab1_125070
+
+Kreiraj lokalan repositorium so isto ime: SI_2025_lab1_125070
+Instaliraj GIT.
+Pocni ga git u Terminal, mozes direktno da inicijalizirash GIT Bash.
+Posle komandi:
+git init
+git remote add origin https://github.com/Milenkovsk1bojan/SI_2025_lab1_125070.git
+Otvaram papka preku nano readme.md, ja zacuvuvam.
+nano readme.md
+CTRL+O + ENTER + CTRL+X
+git add README.md ili git add --all
+
+ZABORAVIV na globalni promenlivi kako korisnik:
+git config --global user.name Milenkovski1bojan
+git config --global user.email milenkovski.bojan@students.finki.ukim.mk
+git config --global color.ui true
+
+git add README.md ili git add --all
+git commit -m "Add the README.md" izvini pogresiv
+git commit -m "Initial commit", iako tehnicki ne e vekje.
+git status
+Kopiranje na SI2025Lab1Main.java. fajl vo folder nov vo lokalen repositorium sto isto se vika SI2025Lab1Main.java, mozno e da e nekoja tehnicka greska, bidejki ova predizvikuva bug, vo prv obid, no ako manuelno ja napisham, raboti.
+
+Neznam zosto nema add funkcija na GIT, nema da se postira ovoj fajl
+Bi trebalo git add SI2025Lab1Main.java/SI2025Lab1Main.java ili git add --all  ili git add "*/.java"
+Napraviv samo git commit
+
+git commit -m "Add starter code"
+git push
+Na push origin master me prefrli na sign in opcija i authorize git ecosystem.
+git push origin master
+
+Potoa dobiv vednash errori: error: failed to push some refs to 'https://github.com/Milenkovsk1bojan/SI_2025_lab1_125070.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+Probav i so git pull, uspeshno izvadi, no git push seuste javuva isti problem.
+Potoa probav so:
+git push -u origin master
+probav i so
+git pull origin master
+fatal: refusing to merge unrelated histories
+Research, fala bogu na stack overflow.
+git -rebase i git -merge i git -merge --allow-unrelated-histories bez nikakva srekja.
+
+Na kraj se odluciv so restart.
+git bash
+cd "C:\Users\Boki\Desktop\SI_2025_lab1_125070"
+git init
+git pull --allow-unrelated-histories
+
+Posle site ovie gluposti, sfativ, vsushnost kodot java ne treba da go ima, bidejki nema add funkcija pred commit za nego.
+Potoa ja poglednav zadachata sto e spodelena i e sosema sprotivna od samite upatstva, mislam navistina kako nekoj prvpat da go koristi sistemot.
