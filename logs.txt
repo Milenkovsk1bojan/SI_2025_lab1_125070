@@ -1,0 +1,9 @@
+* 502bca3 Implemented filter by category feature
+* 26d8dea Implemented sorting tasks by name feature
+* e917bf4 Implemented removeTask by name feature
+*   d6d75d8 Resolved merge conflict for README.md
+|\  
+| * a49faca Create 125070.txt
+| * ea77ecf Initial commit
+* 462f7a2 Add Starter Code
+* 8573c2e Add the README.MD
