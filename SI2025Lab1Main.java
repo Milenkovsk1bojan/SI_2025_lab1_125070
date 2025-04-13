@@ -78,6 +78,7 @@ class TaskManager {
     public void sortTasksByName() {
         // TODO: Implement sorting logic
         tasks.sort(Comparator.comparing(Task::getName));
+        //2nd attempts, I messed up the implementation and added them all at once.
     }
 
     // 4. Sort tasks by priority
