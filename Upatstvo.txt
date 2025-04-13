@@ -1,14 +1,25 @@
+Cekor 1:
 Prvo:
 Kreiraj GitHub profil: Milenkovski1bojan
+
+Cekor 2:
 Preimenuvaj main vo master preku update:
+
+Cekor 3:
 Kreiraj GitHub repozitorium: SI_2025_lab1_125070
 
+
+Cekor 4:
 Kreiraj lokalan repositorium so isto ime: SI_2025_lab1_125070
 Instaliraj GIT.
+
+Cekor 5:
 Pocni ga git u Terminal, mozes direktno da inicijalizirash GIT Bash.
 Posle komandi:
 git init
 git remote add origin https://github.com/Milenkovsk1bojan/SI_2025_lab1_125070.git
+
+Cekor 6:
 Otvaram papka preku nano readme.md, ja zacuvuvam.
 nano readme.md
 CTRL+O + ENTER + CTRL+X
@@ -23,6 +34,8 @@ git add README.md ili git add --all
 git commit -m "Add the README.md" izvini pogresiv
 git commit -m "Initial commit", iako tehnicki ne e vekje.
 git status
+
+Cekor 7:
 Kopiranje na SI2025Lab1Main.java. fajl vo folder nov vo lokalen repositorium sto isto se vika SI2025Lab1Main.java, mozno e da e nekoja tehnicka greska, bidejki ova predizvikuva bug, vo prv obid, no ako manuelno ja napisham, raboti.
 
 Neznam zosto nema add funkcija na GIT, nema da se postira ovoj fajl
@@ -30,6 +43,8 @@ Bi trebalo git add SI2025Lab1Main.java/SI2025Lab1Main.java ili git add --all  il
 Napraviv samo git commit
 
 git commit -m "Add starter code"
+
+Cekor 8:
 git push
 Na push origin master me prefrli na sign in opcija i authorize git ecosystem.
 git push origin master
@@ -58,4 +73,218 @@ git init
 git pull --allow-unrelated-histories
 
 Posle site ovie gluposti, sfativ, vsushnost kodot java ne treba da go ima, bidejki nema add funkcija pred commit za nego.
-Potoa ja poglednav zadachata sto e spodelena i e sosema sprotivna od samite upatstva, mislam navistina kako nekoj prvpat da go koristi sistemot.
+Potoa ja poglednav zadachata sto e spodelena i e sosema sprotivna od samite upatstva, mislam deka ke odam so gotoviot primer.
+
+Znaci, java folder nema, tuku ima java/file kod samo.
+Se preimenuva folder vo SI2025Lab1Main.java1
+i se dodava file: SI2025Lab1Main.java
+
+
+Se pravi.
+git add --all Dodavanje na site fajlovi.
+git commit -m "Add starter code"
+git push
+ls
+git status
+Proverka na ime na remote se pravi so git remote -v
+git remote -v (se vika origin)
+
+Posle site ovie poteskotii, nauciv deka vsusnost problemot e vo README.md, od nekoja pricina ima problem.
+git add README.md
+git commit -m "Resolved merge conflict for README.md"
+
+I na kraj:
+git push origin master
+
+
+
+
+
+
+
+Del1:
+Cekor 9:
+Kreirav proekt pod forma Kanban, gorni tabovi:
+Ime na Kanban proekt SI2025.
+
+
+Cekor 10:
+Potoa vo Backlog, dodadete 9 issues.
+Site se blanko:
+Remove a task by name
+Find all completed tasks
+List tasks sorted by name
+Sort tasks by priority
+Filter tasks by category
+Find the highest-priority unfinished task
+Count tasks per category
+Mark a task as completed by name
+Mark all tasks in a category as completed
+
+
+Cekor 11:
+Potoa samo drag & drop funkcija na 3 vo In Progress, se odluciv na:
+Filter tasks by category
+Remove a task by name
+List tasks sorted by name
+
+Cekor 12:
+Potoa kreirav branches na site 3 vo checkout locally.
+git fetch origin
+git checkout 5-filter-tasks-by-category
+
+git fetch origin
+git checkout 1-remove-a-task-by-name
+
+git fetch origin
+git checkout 3-list-tasks-sorted-by-name
+
+
+
+
+
+
+
+
+Del2:
+Cekor 13:
+git fetch origin
+ls
+git status
+
+Cekor 14i15:
+git checkout 5-filter-tasks-by-category //Proverka na 5tata granka, odnosno prviot prijaven issue.
+
+
+Vo komandite vo java vo lokalen repositorium napishav:
+-Remove a task by name
+    tasks.removeIf(task -> task.getName().equalsIgnoreCase(name));
+
+-List tasks sorted by name
+public void sortTasksByName() {
+    tasks.sort(Comparator.comparing(Task::getName));
+}
+
+-Filter tasks by category
+    List<Task> filtered = new ArrayList<>();
+    for (Task task : tasks) {
+        if (task.getCategory().equalsIgnoreCase(category)) {
+            filtered.add(task);
+        }
+    }
+    return filtered;
+
+Cekor 16i17i18:
+Otkako go zacuvav java fajlot.
+napraviv greshka, trebashe, site po eden na eden, za mallku ke napishev git commit:
+git commit -m "Added issues 1,3 and 5" // Ova ne e isprateno, tuku napraviv
+
+Trebashe da napravam vaka:
+git checkout -b 1-remove-a-task-by-name
+Vo komandite vo java vo lokalen repositorium napishav:
+-Remove a task by name
+    tasks.removeIf(task -> task.getName().equalsIgnoreCase(name));
+git add .
+git commit -m "Implemented removeTask by name feature"
+git push origin 1-remove-a-task-by-name
+
+
+
+Potoa na:
+git checkout -b 3-list-tasks-sorted-by-name
+
+Vnesuvam vrednost:
+
+-List tasks sorted by name
+public void sortTasksByName() {
+    tasks.sort(Comparator.comparing(Task::getName));
+}
+//Messed up...
+
+Potoa:
+git add .
+git commit -m "Implemented sorting tasks by name feature"
+git push origin 3-list-tasks-sorted-by-name
+
+
+Na kraj na:
+git checkout -b 5-filter-tasks-by-category
+
+-Filter tasks by category
+    List<Task> filtered = new ArrayList<>();
+    for (Task task : tasks) {
+        if (task.getCategory().equalsIgnoreCase(category)) {
+            filtered.add(task);
+        }
+    }
+    return filtered;
+// This is for part 5...
+
+na kraj:
+git add .
+git commit -m "Implemented filter by category feature"
+git push origin 5-filter-tasks-by-category
+
+
+
+
+Cekor 19 i 20:
+git checkout -b 1-remove-a-task-by-name origin/1-remove-a-task-by-name
+git checkout -b 3-list-tasks-sorted-by-name origin/3-list-tasks-sorted-by-name
+git checkout -b 5-filter-tasks-by-category origin/5-filter-tasks-by-category
+
+
+Cekor 22:
+No issues whatsoever:
+git checkout master
+git merge 1-remove-a-task-by-name
+
+Cekor 23:
+git push origin master
+
+Cekor 24:
+Ne e avtomatski premesteno za niedno. 
+Manuelno se premesteni.
+
+Cekor 25:
+touch logs.txt
+git log --oneline --graph --all
+
+
+
+Dobiv:
+Boki@BMP MINGW64 ~/Desktop/SI_2025_lab1_125070 (master)
+$ git log --oneline --graph --all
+* 502bca3 (origin/5-filter-tasks-by-category, 5-filter-tasks-by-category) Implemented filter by category feature
+* 26d8dea Implemented sorting tasks by name feature
+* e917bf4 Implemented removeTask by name feature
+*   d6d75d8 (HEAD -> master, origin/master, origin/HEAD, origin/3-list-tasks-sorted-by-name, origin/1-remove-a-task-by-name, 3-list-tasks-sorted-by-name, 1-remove-a-task-by-name) Resolved merge conflict for README.md
+|\
+| * a49faca Create 125070.txt
+| * ea77ecf Initial commit
+* 462f7a2 Add Starter Code
+* 8573c2e Add the README.MD
+
+
+Kopirav preku nano logs.txt CTRL+O   + ENTER +   CTRL+X
+Istoto go napraviv i vo 125070.txt, upatstvoto ne e ubavo objasneto i neznaev sto vsusnost sakate so 125070.txt
+
+
+nano 125070.txt CTRL+O   + ENTER +   CTRL+X
+
+Potoa sfativ najverojatno barate:
+git log --oneline --graph --all > logs.txt
+
+Otkako istrazuvav.
+
+
+Cekor 26:
+git add logs.txt 125070.txt Upatstvo.txt
+git commit -m "Hopefully Final commit"
+git push origin master
+
+
+
+
+Del 3:
+Cekor 27:
