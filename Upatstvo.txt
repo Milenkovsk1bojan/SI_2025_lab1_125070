@@ -58,4 +58,100 @@ git init
 git pull --allow-unrelated-histories
 
 Posle site ovie gluposti, sfativ, vsushnost kodot java ne treba da go ima, bidejki nema add funkcija pred commit za nego.
-Potoa ja poglednav zadachata sto e spodelena i e sosema sprotivna od samite upatstva, mislam navistina kako nekoj prvpat da go koristi sistemot.
+Potoa ja poglednav zadachata sto e spodelena i e sosema sprotivna od samite upatstva, mislam deka ke odam so gotoviot primer.
+
+Znaci, java folder nema, tuku ima java/file kod samo.
+Se preimenuva folder vo SI2025Lab1Main.java1
+i se dodava file: SI2025Lab1Main.java
+
+
+Se pravi.
+git add --all Dodavanje na site fajlovi.
+git commit -m "Add starter code"
+git push
+ls
+git status
+Proverka na ime na remote se pravi so git remote -v
+git remote -v (se vika origin)
+
+Posle site ovie poteskotii, nauciv deka vsusnost problemot e vo README.md, od nekoja pricina ima problem.
+git add README.md
+git commit -m "Resolved merge conflict for README.md"
+
+I na kraj:
+git push origin master
+
+
+
+
+
+
+
+Del1:
+Kreirav proekt pod forma Kanban, gorni tabovi:
+Ime na Kanban proekt SI2025.
+
+
+
+Potoa vo Backlog, dodadete 9 issues.
+Site se blanko:
+Remove a task by name
+Find all completed tasks
+List tasks sorted by name
+Sort tasks by priority
+Filter tasks by category
+Find the highest-priority unfinished task
+Count tasks per category
+Mark a task as completed by name
+Mark all tasks in a category as completed
+
+
+
+Potoa samo drag & drop funkcija na 3 vo In Progress, se odluciv na:
+Filter tasks by category
+Remove a task by name
+List tasks sorted by name
+
+Potoa kreirav branches na site 3 vo checkout locally.
+git fetch origin
+git checkout 5-filter-tasks-by-category
+
+git fetch origin
+git checkout 1-remove-a-task-by-name
+
+git fetch origin
+git checkout 3-list-tasks-sorted-by-name
+
+
+
+
+
+
+
+
+Del2:
+git fetch origin
+ls
+git status
+
+
+git checkout 5-filter-tasks-by-category //Proverka na 5tata granka, odnosno prviot prijaven issue.
+
+
+Vo komandite vo java vo lokalen repositorium napishav:
+-Remove a task by name
+    tasks.removeIf(task -> task.getName().equalsIgnoreCase(name));
+
+-List tasks sorted by name
+public void sortTasksByName() {
+    tasks.sort(Comparator.comparing(Task::getName));
+}
+
+-Filter tasks by category
+    List<Task> filtered = new ArrayList<>();
+    for (Task task : tasks) {
+        if (task.getCategory().equalsIgnoreCase(category)) {
+            filtered.add(task);
+        }
+    }
+    return filtered;
